@@ -1,4 +1,4 @@
-Payment Gateway
+#Payment Gateway
 This project is a simple dummy payment gateway designed to simulate the user experience of making an online payment. It provides a seamless flow for users to enter payment details and complete a transaction with a success confirmation. While it does not involve any real financial transactions, it mimics the essential steps in a payment process, including:
 
 Mobile Number Validation: Ensures that users provide a valid 10-digit mobile number before proceeding to payment.
