@@ -40,7 +40,7 @@
           <span class="close-text">&times;</span>
         </span>
         <div class="container">
-          <h1>Proceed for Payment</h1>
+          <h1>Proceed to Pay</h1>
           <div class="section-headings">
             <div
               class="heading"
@@ -49,6 +49,13 @@
             >
               <span class="checkmark" id="mobile-check">&#x2713;</span>Mobile
               Number
+            </div>
+            <div
+              class="heading"
+              id="address-heading"
+              onclick="navigateToSection('address-section')"
+            >
+              <span class="checkmark" id="address-check">&#x2713;</span>Address
             </div>
             <div
               class="heading"
@@ -97,6 +104,113 @@
               </center>
             </div>
           </form>
+          <div
+            id="address-section"
+            style="
+              display: none;
+              margin-top: -60px;
+              height: 210px;
+              overflow-y: auto;
+              padding: 7%;
+            "
+          >
+            <center>
+              <h2 style="margin-top: -2%">Add New Address</h2>
+            </center>
+            <div class="fields fields--2">
+              <label class="field" style="width: 210%">
+                <span class="field__label" for="zipcode">Zip code</span>
+                <input
+                  class="field__input"
+                  type="text"
+                  id="zipcode"
+                  maxlength="6"
+                  required
+                />
+                <div id="zipcode-error" class="error-message"></div>
+              </label>
+              <br />
+              <label class="field" style="width: 210%">
+                <span class="field__label" for="city">City</span>
+                <input class="field__input" type="text" id="city" required />
+              </label>
+              <br />
+              <label class="field" style="width: 210%">
+                <span class="field__label" for="state">State</span>
+                <input class="field__input" type="text" id="state" required />
+              </label>
+            </div>
+            <br />
+            <div class="fields fields--2">
+              <label class="field" style="width: 210%">
+                <span class="field__label" for="firstname">Full Name</span>
+                <input
+                  class="field__input"
+                  type="text"
+                  id="firstname"
+                  required
+                />
+              </label>
+              <br />
+              <label class="field" style="width: 210%">
+                <span class="field__label" for="lastname">Email Address</span>
+                <input
+                  class="field__input"
+                  type="email"
+                  id="lastname"
+                  required
+                />
+              </label>
+            </div>
+            <br />
+            <div class="fields fields--2">
+              <label class="field" style="width: 210%">
+                <span class="field__label" for="address"
+                  >Full Address (House no., Area, etc)</span
+                >
+                <input
+                  class="field__input"
+                  type="text"
+                  id="address"
+                  required
+                  style="word-wrap: break-word; white-space: normal"
+                />
+              </label>
+              <br />
+            </div>
+            <br />
+            <button
+              style="
+                position: absolute;
+                bottom: 70px;
+                left: 50%;
+                width: 40%;
+                border-radius: 20px;
+                transform: translateX(-50%);
+              "
+              class="button"
+              type="button"
+              onclick="checkAddress()"
+            >
+              Next
+            </button>
+          </div>
+          <div id="payment-section-container" style="position: relative">
+            <div
+              id="payment-section"
+              style="
+                display: none;
+                margin-top: -60px;
+                height: 200px;
+                overflow-y: auto;
+                padding: 7%;
+              "
+            >
+              <center>
+                <h3 style="margin-top: -2%"
+                  >Please Select payment method to complete the order</h3
+                >
+              </center>
               <div class="payment-section">
                 <div class="payment-box">
                   <span>PhonePe</span>
